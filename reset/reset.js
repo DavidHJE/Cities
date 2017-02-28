@@ -16,8 +16,7 @@ if (Meteor.isServer) {
                 "emails": [{
                         "address": "derek@dkit.ie",
                         "verified": false
-      }
-  ]
+                        }]
             };
             var gilles = {
                 "_id": "u1",
@@ -25,7 +24,7 @@ if (Meteor.isServer) {
                 "services": {
                     "password": {
                         "bcrypt": "$2a$10$PtpfLpKrWd3/AbQz1CCL6ubnHpWd2D.QVvQSJLoL.WPKpQjZCGIi." //gilles.fr
-                    },
+                        },
                     "resume": {
                         "loginTokens": []
                     }
@@ -33,8 +32,7 @@ if (Meteor.isServer) {
                 "emails": [{
                         "address": "gilles@iut.fr",
                         "verified": false
-      }
-  ]
+                        }]
             };
             Meteor.users.remove({});
             Meteor.users.insert(derek);
@@ -57,7 +55,7 @@ if (Meteor.isServer) {
                     },
                     date: new Date(),
                     text: "I love this place !!"
-  }],
+                        }],
                 description: "Le musée Granet présente près de 600 oeuvres de peinture, sculpture, pièces archéologiques. Peintures hollandaises, italiennes, françaises de diverses époques",
                 url: "http://museegranet-aixenprovence.fr"
             };
@@ -77,7 +75,7 @@ if (Meteor.isServer) {
                     },
                     date: new Date(),
                     text: "great"
-  }],
+                    }],
                 description: "no description"
             };
             var festival = {
@@ -96,7 +94,7 @@ if (Meteor.isServer) {
                     },
                     date: new Date(),
                     text: "Awful music"
-  }],
+                }],
                 description: "Fort de son succès, le Festival d’Aix accueille un public non seulement local, mais aussi national, et un grand nombre de spectateurs et de journalistes venus du monde entier.",
                 url: "http://festival-aix.com/en",
                 dateStart: new Date('2016-6-15'),
@@ -122,17 +120,17 @@ if (Meteor.isServer) {
                     name: granet.name,
                     nature: granet.nature,
                     picture: granet.pictures[0]
-  }, {
+                    }, {
                     _id: saintSauveur._id,
                     name: saintSauveur.name,
                     nature: saintSauveur.nature,
                     picture: saintSauveur.pictures[0]
-  }, {
+                    }, {
                     _id: festival._id,
                     name: festival.name,
                     nature: festival.nature,
                     picture: festival.pictures[0]
-  }]
+                    }]
             };
             var boulogne = {
                 _id: "c1",
