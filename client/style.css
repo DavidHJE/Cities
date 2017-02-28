@@ -1,5 +1,8 @@
 header
 {
-    background-image: url("../public/pictures/back_header.jpg");
+    background-image: url("pictures/back_header.jpg");
+    background-size: cover;
+    background-position: bottom;
     box-shadow: 0px 0px 3px #ccc;
+    height: 300px;
 }
