@@ -7,15 +7,15 @@ Router.route("/", {
     template: "home"
 });
 
-Router.route("/charts", {
+Router.route("charts", {
     template: "charts"
 });
 
-Router.route("/about", {
+Router.route("about", {
     template: "about"
 });
 
-Router.route('/city/:id', {
+Router.route('city/:id', {
     template: "city",
     data: function () {
         // Return the document for the selected city (the one whose id is given)
