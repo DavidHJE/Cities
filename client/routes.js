@@ -23,3 +23,10 @@ Router.route('city/:id', {
         return Cities.findOne(this.params.id);
     }
 });
+
+Router.route('activities/:id', {
+    template: "activities",
+    data: function () {
+        return Activities.findOne(this.params.id);
+    }
+});

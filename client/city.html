@@ -10,13 +10,13 @@
 
     <h2>Places</h2>
     {{#each p in places}}
-        <h3>{{p.name}}</h3>
+        <h3><a href="/activities/{{p._id}}">{{p.name}}</a></h3>
         <img src="{{p.picture}}">
     {{/each}}
 
     <h2>Events</h2>
     {{#each e in events}}
-        <h3>{{e.name}}</h3>
+        <h3><a href="/activities/{{e._id}}">{{e.name}}</a></h3>
         <img src="{{e.picture}}">
     {{/each}}
 </template>
