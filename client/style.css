@@ -1,10 +1,75 @@
+/** FONT **/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/** BODY **/
+
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+/** Header et nav **/
 header
 {
-    background-image: url("pictures/back_header.jpg");
-    background-size: cover;
-    background-position: bottom;
-    box-shadow: 0px 0px 3px #ccc;
-    height: 300px;
+    margin-top: 0;
+    position: relative;
+    height: 200px;
+    background-color: red;
+    display: flex;
+    align-items: flex-end;
+}
+
+nav
+{
+    background-color: #208a71;
+    height : 60px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul
+{
+    display: flex;
+}
+
+nav li
+{
+    display: inline-block;
+    line-height: 60px;
+    font-size: 1.2em;
+}
+
+header h1
+{
+    display: none;
+}
+
+.endlist
+{
+    margin-left: auto;
+}
+
+nav a
+{
+    color: white;
+    height: 60px;
+    display: block;
+    background-color: rebeccapurple;
+    padding: 0 20px;
+}
+
+#login-buttons
+{
+    line-height: inherit;
+}
+
+#resetbtn
+{
+    position: absolute;
+    bottom:0;
+    right:0;
 }
 
 .map-container {
