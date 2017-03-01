@@ -27,6 +27,7 @@ nav
     height : 60px;
     width: 100%;
     font-family: 'Roboto', sans-serif;
+    box-shadow: 1px 1px 5px #999;
 }
 
 nav ul
@@ -38,7 +39,7 @@ nav li
 {
     display: inline-block;
     line-height: 60px;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 header h1
