@@ -21,6 +21,15 @@ header
     align-items: flex-end;
 }
 
+#logo
+{
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    transform: translateX(-50%);
+    height: 150px;
+}
+
 nav
 {
     background-color: #208a71;
