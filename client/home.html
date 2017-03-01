@@ -8,4 +8,14 @@
             </figcaption>
         </figure>
     {{/each}}
+
+    {{#if currentUser}}
+    	<h2>Insert a new city :</h2>
+    	<form method="post" action="#">
+    		<input type="text" name="nameCity" placeholder="Name of your city" required="" /> <br/>
+    		<input type="text" name="nameCity" placeholder="Lattitude" required="" /> <br/>
+    		<input type="text" name="nameCity" placeholder="Lontitude" required="" /> <br/>
+    		<input type="submit" name="valider" value="create" required="" id="createcity" />
+    	</form>
+    {{/if}}
 </template>
