@@ -1,20 +1,3 @@
-<!-- <head>
-    <title>Visiting Cities !</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-</head>
-
-<body>
-    <header>
-        <h1>Visiting cities</h1>
-        {{>loginButtons }}
-        {{>navbar}}
-        {{>reset}}
-    </header>
-    <main>
-        {{>home}}
-    </main>
-</body> -->
-
 <TEMPLATE name="reset">
     <button>reset</button>
 </TEMPLATE>
@@ -36,34 +19,4 @@
             {{>yield}}
         </main>
     </body>
-</template>
-
-<template name="notFound">
-    <p>page inconu</p>
-</template>
-
-<template name="about">
-    <p>We are ...</p>
-</template>
-
-<template name="charts">
-    <p>I don't know</p>
-</template>
-
-<template name="city">
-<h1>{{name}}</h1>
-<img src="{{picture}}">
-<p>{{{description}}}</p>
-
-<h2>Places</h2>
-{{#each p in places}}
-    <h3>{{p.name}}</h3>
-    <img src="{{p.picture}}">
-{{/each}}
-
-<h2>Events</h2>
-{{#each e in events}}
-    <h3>{{e.name}}</h3>
-    <img src="{{e.picture}}">
-{{/each}}
 </template>
