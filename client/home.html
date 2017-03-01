@@ -1,13 +1,19 @@
 <template name="home">
-    <h1>All our cities</h1>
-    {{#each c in cities}}
-        <figure>
-            <img src="{{c.picture}}"/>
-            <figcaption>
+    <h1>Welcome on Eyes2cities ... The places to be !</h1>
+    <p>You can find in this website many cities with beautiful places, events (festivals, concerts and so on).
+        Please, join us, and you will have the possibilities to participate to this new social network.
+        Enjoy!!</p>
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        {{#each c in cities}}
+         <figure class="grid-item">
+             <img src="{{c.picture}}"/>
+             <figcaption>
                 <a href="/city/{{c._id}}">{{c.name}}</a>
-            </figcaption>
-        </figure>
-    {{/each}}
+             </figcaption>
+         </figure>
+        {{/each}}
+    </div>
     <div id="resetbtn">{{>reset}}</div>
 
 
