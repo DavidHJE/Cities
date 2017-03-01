@@ -16,7 +16,7 @@ header
     margin-top: 0;
     position: relative;
     height: 200px;
-    background-color: red;
+    background-color: white;
     display: flex;
     align-items: flex-end;
 }
@@ -27,6 +27,7 @@ nav
     height : 60px;
     width: 100%;
     font-family: 'Roboto', sans-serif;
+    box-shadow: 1px 1px 5px #999;
 }
 
 nav ul
@@ -38,7 +39,7 @@ nav li
 {
     display: inline-block;
     line-height: 60px;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 header h1
@@ -56,8 +57,28 @@ nav a
     color: white;
     height: 60px;
     display: block;
-    background-color: rebeccapurple;
+    background-color: #208a71;
     padding: 0 20px;
+    transition: background-color 0.5s;
+    text-decoration: none;
+}
+nav a:hover
+{
+    color: white;
+    text-decoration: none;
+    background-color: #40aa91;
+}
+
+#login-dropdown-list a
+{
+    color: black;
+    display: inline;
+    background-color: white;
+}
+
+#login-buttons-password
+{
+    background: #208a71;
 }
 
 #login-buttons
