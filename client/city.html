@@ -19,4 +19,16 @@
         <h3><a href="/activities/{{e._id}}">{{e.name}}</a></h3>
         <img src="{{e.picture}}">
     {{/each}}
+
+    {{#if currentUser}}
+        <h2>Insert a new activity :</h2>
+        <form>
+            <input type="text" name="newActivity" placeholder="Name  activity" required /> <br/>
+            <textarea name="description">Description</textarea> <br />
+            <input type="text" name="url" placeholder="url" required /> <br/>
+            <input type="text" name="StartDate" placeholder="Start Date" /> <br/>
+            <input type="text" name="DateEnd" placeholder="Date End"  /> <br/>
+            <input type="submit" name="ok" value="create" />
+        </form>
+    {{/if}}
 </template>
