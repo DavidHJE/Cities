@@ -7,6 +7,25 @@ Meteor.methods({
             long : long 
         });
     },
+    
+    initUploadServerForCity: function (name, lat, long) {
+        UploadServer.init({
+            tmpDir: process.env.PWD + '/.uploads/tmp',
+            uploadDir: process.env.PWD + '/public/images/' + name,
+            checkCreateDirectories: true, //create the directories for you
+            finished: function (req) {
+                var fileName = "/images/" + name + "/" + req.name;
+                // Insert the new city in the collection here
+                Cities.insert({
+            name: cityName,
+            lat : lat,
+            long : long ,
+                picture : fileName 
+        });
+                
+            }
+        });
+    },
 
     insertActivity : function(activity) {
     	return Activities.insert(activity);
