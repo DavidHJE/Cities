@@ -45,9 +45,13 @@ Meteor.methods({
     },
 
     'addLike': function(idActivity){
+      var idUser = Meteor.userId();
+      console.log(idUser + " " + idActivity);
+     var act = Activities.find({_id:idActivity,likes:idUser});
+     if (act)
       Activities.update(
         {_id:idActivity},
-        {$push:{likes:[]}}
+        {$push:{likes:idUser}}
       );
     }
 });
