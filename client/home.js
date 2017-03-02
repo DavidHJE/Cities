@@ -9,7 +9,7 @@ Template.home.helpers({
 
 
 Template.home.events({
-    "click button" : function(event){
+    "click #createcity" : function(event){
         event.preventDefault();
         var cityName = $("#f1").val();
         var long = $("#f2").val(); 
