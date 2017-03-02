@@ -15,34 +15,7 @@
                     </figure>
                 </a>
             {{/each}}
-            {{#each c in cities}}
-                <a href="/city/{{c._id}}" class="item">
-                    <figure>
-                        <img src="{{c.picture}}"/>
-                        <figcaption>
-                            <div>{{c.name}}</div>
-                        </figcaption>
-                    </figure>
-                </a>
-            {{/each}}
-            {{#each c in cities}}
-                <a href="/city/{{c._id}}" class="item">
-                    <figure>
-                        <img src="{{c.picture}}"/>
-                        <figcaption>
-                            <div>{{c.name}}</div>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="/city/{{c._id}}" class="item">
-                    <figure>
-                        <img src="{{c.picture}}"/>
-                        <figcaption>
-                            <div>{{c.name}}</div>
-                        </figcaption>
-                    </figure>
-                </a>
-            {{/each}}
+
         </div>
     </div>
     <div id="resetbtn">{{>reset}}</div>
@@ -56,5 +29,8 @@
     		<input id="f3" type="text" name="cityLongtitude" placeholder="Longtitude" required="" /> <br/>
             <button name="valider" id="createcity">Create </button>
     	</div>
+    {{/if}}
+    {{#if currentUser}}
+    {{> upload_bootstrap }}
     {{/if}}
 </template>

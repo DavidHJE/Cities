@@ -16,6 +16,7 @@ Template.home.events({
         var lat = $("#f3").val(); 
        
        Meteor.call("insert",cityName,long,lat);
+        Meteor.call("initUploadServerForCity",cityName,long,lat);
         
         $("#f1").val(""); 
         $("#f2").val(""); 
