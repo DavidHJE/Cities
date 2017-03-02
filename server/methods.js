@@ -23,5 +23,12 @@ Meteor.methods({
         {_id:idActivity},
         {$push:{comments:com}}
       );
+    },
+
+    'addLike': function(idActivity){
+      Activities.update(
+        {_id:idActivity},
+        {$push:{likes:[]}}
+      );
     }
 });

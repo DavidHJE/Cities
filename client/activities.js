@@ -33,5 +33,11 @@ Template.activities.events({
         }
         Meteor.call("addCom", comments, Template.currentData()._id);
         return false;
+    },
+
+    'click #aime' : function(e){
+        e.preventDefault();
+
+        Meteor.call("addLike", Template.currentData()._id);
     }
 });
