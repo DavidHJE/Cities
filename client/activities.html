@@ -11,4 +11,12 @@
 	{{#each com in comments}}
 		<p>{{com.user.email}} : {{com.text}}</p>
 	{{/each}}
+
+	{{#if currentUser}}
+	    <h2>Add your comment :</h2>
+	    <form>
+	        <textarea name="description" placeholder="Description"></textarea> <br />
+	        <input type="submit" name="commentaire" value="Send" />
+	    </form>
+	{{/if}}
 </template>

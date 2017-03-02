@@ -16,5 +16,12 @@ Meteor.methods({
     	var activit = Activities.findOne({"_id":idActivity}) ;
 
 		return Cities.update({"_id":idCity}, {$push: {"activities": activit}});
+    },
+
+    'addCom': function(com, idActivity){
+      Activities.update(
+        {_id:idActivity},
+        {$push:{comments:com}}
+      );
     }
 });
