@@ -6,3 +6,7 @@ Template.reset.events({
 	}
 });
 
+$( window ).load( function()
+{
+    $( '.list' ).masonry( { itemSelector: '.item' } );
+});
