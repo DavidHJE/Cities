@@ -110,6 +110,40 @@ nav a:hover
   height: 500px;
 }
 
+@media only screen and ( max-width: 640px )
+{
+    nav
+    {
+        position: relative;
+    }
+    nav ul
+    {
+        position: absolute;
+        flex-direction: column;
+        top: 60px;
+        width: 100%;
+    }
+    nav li
+    {
+        margin-right: auto;
+        min-width: 200px;
+    }
+    .endlist
+    {
+        margin: 0;
+    }
+    #login-buttons
+    {
+        min-width: 200px;
+        text-align: center;
+    }
+    .left-nav
+    {
+        text-align: center;
+    }
+}
+
+
 /** Contenu **/
 
 main img
@@ -165,7 +199,7 @@ main h1
     margin: 0 1.515% 1.875em; /* 15px 30px */
 }
 
-@media only screen and ( max-width: 40em ) /* 640px */
+@media only screen and ( max-width: 640px )
 {
     .item
     {
@@ -173,7 +207,7 @@ main h1
         margin-bottom: 0.938em; /* 15px */
     }
 }
-@media only screen and ( max-width: 20em ) /* 640px */
+@media only screen and ( max-width: 500px )
 {
     .list
     {
