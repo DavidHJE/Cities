@@ -61,7 +61,6 @@ Template.city.events({
     Meteor.call("insertActivity", activity, function(err,idActivity) {
       console.log("Erreur"+err);
       Meteor.call("updateCity", city, idActivity);
-
     });
     //Meteor.call("updateCity", city, activity);
   }
