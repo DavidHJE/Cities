@@ -1,12 +1,12 @@
 Template.activities.helpers({
-    pictures : function() {
+    /*pictures : function() {
         var pic = [];
         for (var i = 0; i < this.pictures.length; i++)
         {
             pic.push(this.pictures[i]);
         }
         return pic;
-    },
+    },*/
 
     /*comments : function() {
         var comments = [];
@@ -15,8 +15,15 @@ Template.activities.helpers({
         {
             comments.push(this.comments[i]);
         }
+
         return comments;
     }*/
+    countlikes : function(){
+       // console.log("OK");
+        console.log("data:", Template.currentData());
+        return Template.currentData().likes.length;
+        /*return 2;*/
+    }
 
 });
 
@@ -40,6 +47,6 @@ Template.activities.events({
         e.preventDefault();
 
         Meteor.call("addLike", Template.currentData()._id);
-        Meteor.call("countLike", Template.currentData()._id);
+        /*Meteor.call("countLike", Template.currentData()._id);*/
     }
 });
