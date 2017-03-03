@@ -37,9 +37,13 @@ Template.city.helpers({
        var lat = temp.coordinates.lat ;
       if (GoogleMaps.loaded()) {
         return {
-          center: new google.maps.LatLng(long ,lat),
-          zoom: 8
         
+          center: new google.maps.LatLng(long ,lat),
+          zoom: 13,
+          navigationControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        draggable: true
         };
       }
     }
