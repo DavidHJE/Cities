@@ -47,7 +47,7 @@ if (Meteor.isServer) {
                     }
                 },
                 "emails": [{
-                        "address": "groupe@gmail.fr",
+                        "address": "groupe@gmail.com",
                         "verified": false
                         }]
             };
@@ -147,12 +147,46 @@ if (Meteor.isServer) {
                 description: "ESCAPE is the fun destination with exciting rides and games hosted in a natural .environment. ESCAPE re-introduces the play and values of yesteryear so to inject reality into a world overdependent on an isolation-inducing electronic lifestyle. Through fun activities, with an emphasis on self-directed and self-powered play, the visitor experiences Low Tech, High Fun. ESCAPE demonstrates there’s no age limit to having fun as the rides and games are designed for a wide range of age groups, abilities, and energy levels"
             };
 
+            var penanghotair = {
+                _id: "c2a2",
+                name: "Penang Hot Air Balloon Fiesta",
+                nature: "event",
+                editor: {
+                    _id: groupe._id,
+                    email: groupe.emails[0].address
+                },
+                pictures: ["/images/penang/penang-hot-air-balloon-04.jpg", "/images/penang/penang-hot-air-balloon-06.jpg"],
+                comments: [],
+                description: "Penang Hot Air Balloon Fiesta 2016 is a two-day event that takes place in Georgetown’s Padang Polo, where visitors can enjoy fun-filled activities and marvel at cool hot air balloons floating in the sky. Similar to Adirondack Hot Air Balloon Festival in the US, expect to see an array of unique designs such as a gigantic ice-cream cone, an orange, and a space rocket. Held on 9th and 10th February, the event features 15 hot air balloons from the US, Belgium, Thailand, South Korea, and Netherlands. Best of all, you can also enjoy a vertigo-inducing ride in one of the three tethered balloons or explore the interior of a cold inflation balloon.",
+                url: "",
+                dateStart: new Date('2016-2-9'),
+                dateEnd: new Date('2016-2-10')
+            };
+
+            var georgetown = {
+                _id: "c2a3",
+                name: "George Town Festival",
+                nature: "event",
+                editor: {
+                    _id: groupe._id,
+                    email: groupe.emails[0].address
+                },
+                pictures: ["/images/penang/georgetown-festival00.jpg", "/images/penang/georgetown-festival01.jpg"],
+                comments: [],
+                description: "George Town Festival is an exciting month-long celebration of local art, music, theatre, dance, and film in Penang. The event started back in 2009 as a series of arts and cultural events to commemorate Georgetown’s listing as a UNESCO Heritage Site before becoming one of Malaysia’s most high-anticipated cultural events of the year. For the entire month of August, the festival allows visitors to enjoy a diverse range of shows and attractions exploring Georgetown’s well-preserved heritage buildings and colourful street arts. There are also hundreds of booths selling Penang’s well-loved delicacies and snacks as well as local artwork, books, trinkets and souvenirs.",
+                url: "",
+                dateStart: new Date('2016-8-1'),
+                dateEnd: new Date('2016-2-31')
+            };
+
             Activities.remove({})
             Activities.insert(granet);
             Activities.insert(saintSauveur);
             Activities.insert(festival);
             Activities.insert(payarisland);
             Activities.insert(escapepark);
+            Activities.insert(penanghotair);
+            Activities.insert(georgetown);
 
             // **** cities
             var aix = {
@@ -207,7 +241,22 @@ if (Meteor.isServer) {
                     name: payarisland.name,
                     nature: payarisland.nature,
                     picture: granet.pictures[0]
-                    }]
+                    }, {
+                    _id: escapepark._id,
+                    name: escapepark.name,
+                    nature: escapepark.nature,
+                    picture: escapepark.pictures[0]
+                    },{
+                    _id: penanghotair._id,
+                    name: penanghotair.name,
+                    nature: penanghotair.nature,
+                    picture: penanghotair.pictures[0]
+                    },{
+                    _id: georgetown._id,
+                    name: georgetown.name,
+                    nature: georgetown.nature,
+                    picture: georgetown.pictures[0]
+                    },]
             };
 
 
