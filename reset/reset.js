@@ -187,7 +187,7 @@ if (Meteor.isServer) {
                     _id: groupe._id,
                     email: groupe.emails[0].address
                 },
-                pictures: ["/images/penang/escapePark2.jpg", "/images/penang/escapePark1.jpg"],
+                pictures: ["/images/bordeaux/PlaceBourse.jpg", "/images/bordeaux/PlaceBourse2.jpg"],
                 comments: [],
                 description: "no description"
             };
@@ -200,7 +200,7 @@ if (Meteor.isServer) {
                     _id: groupe._id,
                     email: groupe.emails[0].address
                 },
-                pictures: ["/images/penang/escapePark2.jpg", "/images/penang/escapePark1.jpg"],
+                pictures: ["/images/bordeaux/ZooPessac"],
                 comments: [],
                 description: "no description"
             };
@@ -213,7 +213,7 @@ if (Meteor.isServer) {
                     _id: groupe._id,
                     email: groupe.emails[0].address
                 },
-                pictures: ["/images/penang/escapePark2.jpg", "/images/penang/escapePark1.jpg"],
+                pictures: ["/images/bordeaux/Cathedrale.png"],
                 comments: [],
                 description: "no description"
             };
@@ -226,7 +226,7 @@ if (Meteor.isServer) {
                     _id: groupe._id,
                     email: groupe.emails[0].address
                 },
-                pictures: ["/images/penang/escapePark2.jpg", "/images/penang/escapePark1.jpg"],
+                pictures: ["/images/bordeaux/rockschool"],
                 comments: [],
                 description: "no description"
             };
@@ -319,11 +319,11 @@ if (Meteor.isServer) {
                 _id: "c3",
                 name: 'Bordeaux',
                 coordinates: {
-                    long: "-0.5805000",
-                    lat: "44.8404400"
+                    long: "44.837789",
+                    lat: "-0.57918"
                 },
                 description: "Bordeaux is a port city on the Garonne River in the Gironde department in southwestern France. <br /> The municipality of Bordeaux proper has a population of 243,626 (2012). Together with its suburbs and satellite towns, Bordeaux is the fifth largest in France, after Paris, Lyon, Marseille and Lille, and before Toulouse. It is the capital of the Nouvelle-Aquitaine region, as well as the prefecture of the Gironde department. Its inhabitants are called Bordelais (for men) or Bordelaises (women). <br /> Bordeaux is the world's major wine industry capital. It is home to the world's main wine fair, Vinexpo, and the wine economy in the metro area takes in 14.5 billion euros each year. After Paris, Bordeaux has the highest number of preserved historical buildings of any city in France.",
-                picture: '/images/penang/penang.jpg',
+                picture: '/images/bordeaux/bordeaux.jpg',
                 activities: [{
                     _id: placebourse._id,
                     name: placebourse.name,
