@@ -143,9 +143,14 @@ if (Meteor.isServer) {
                 picture: '/images/Boulogne/centre.jpg',
                 activities: []
             };
+
+            var penang = {
+
+            }
             Cities.remove({});
             Cities.insert(aix);
             Cities.insert(boulogne);
+            Cities.insert(penang);
         },
     })
 }
