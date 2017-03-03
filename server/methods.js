@@ -42,5 +42,31 @@ Meteor.methods({
         {_id:idActivity},
         {$push:{comments:com}}
       );
+    },
+
+    'addLike': function(idActivity){
+      var idUser = Meteor.userId();
+      /*console.log(idUser + " " + idActivity);*/
+     var act = Activities.findOne({_id:idActivity, likes:idUser});
+     /*console.log(act);*/
+     if (typeof(act)=="undefined"){
+           Activities.update(
+             {_id:idActivity},
+             {$push:{likes:idUser}}
+           );}
+      else {
+        Activities.update(
+          {_id:idActivity},
+          {$pull:{likes:idUser}}
+        );
+      }},
+
+      'countLike' : function(idActivity){
+        var act = Activities.findOne({_id:idActivity, likes:idUser});
+        var cunt;
+        for (var i = 0; i < Activities.likes.length; i++){
+          cunt=i;
+        }
+      return cunt;
     }
 });
