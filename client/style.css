@@ -349,6 +349,7 @@ figcaption div
 .user_comm
 {
     width: 20%;
+    font-style: italic;
 }
 
 /** Like **/
@@ -387,6 +388,24 @@ input[type="submit"]
     }
     input
     {
+        width: 100%;
+    }
+    .flex-comm
+    {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .comm
+    {
+        width: 100%;
+        margin-top: -15px;
+    }
+    .user_comm
+    {
+        margin-top: -15px;
         width: 100%;
     }
 }
