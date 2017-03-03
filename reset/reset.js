@@ -34,9 +34,29 @@ if (Meteor.isServer) {
                         "verified": false
                         }]
             };
+
+            var groupe = {
+                "_id": "u2",
+                "createdAt": new Date("2017-02-04T09:29:14.662Z"),
+                "services": {
+                    "password": {
+                        "bcrypt": "$2a$10$PtpfLpKrWd3/AbQz1CCL6ubnHpWd2D.QVvQSJLoL.WPKpQjZCGIi." //gilles.fr
+                        },
+                    "resume": {
+                        "loginTokens": []
+                    }
+                },
+                "emails": [{
+                        "address": "groupe@gmail.fr",
+                        "verified": false
+                        }]
+            };
+
+
             Meteor.users.remove({});
             Meteor.users.insert(derek);
             Meteor.users.insert(gilles);
+            Meteor.users.insert(groupe);
 
             // *** activities
             var granet = {
@@ -100,10 +120,26 @@ if (Meteor.isServer) {
                 dateStart: new Date('2016-6-15'),
                 dateEnd: new Date('2016-7-10')
             };
+
+            var payarisland = {
+                _id: "c2a0",
+                name: "Payar Island",
+                nature: "place",
+                editor: {
+                    _id: groupe._id,
+                    email: groupe.emails[0].address
+                },
+                pictures: ["/images/Aix/sauveur1.jpg"],
+                comments: [],
+                description: "Payar Island is one of the many islands off mainland Kedah in the Strait of Malacca. It is situated south of Langkawi, a more famous archipelago. Payar Island status as a marine park offers protection for its diverse marine life. Payar Island is also a snorkelling and diving site famous for its corals. <br /> The Payar Island Marine Park is situated in the northern part of the Straits of Melaka, 19 nautical miles (35 km) south of Langkawi and encompasses the islands of Payar, Lembu, Segantang and Kaca which are surrounded by coral reefs. The marine park teems with a diversity of marine life and vegetation."
+            };
+
+
             Activities.remove({})
             Activities.insert(granet);
             Activities.insert(saintSauveur);
             Activities.insert(festival);
+            Activities.insert(payarisland);
 
             // **** cities
             var aix = {
@@ -145,8 +181,23 @@ if (Meteor.isServer) {
             };
 
             var penang = {
+                _id: "c2",
+                name: 'Penang',
+                coordinates: {
+                    long: "5.4163",
+                    lat: "100.3328"
+                },
+                description: "Penang, also known as the pearl of the orient, is one of the most touristic locations of Malaysia. The island (285 square meters) is situated on the northwest side of the Peninsular Malaysia. There are loads of activities and sights on the island. Hanging around on the beach is also considered a fine option. About 700.000 people inhabit Penang Island, of which 59% are Chinese, 32% are Malay and 7% are Indian (2% are of other origin). The state of Penang has a population of 1,5 million (of which 43% are Malay and 41% Chinese). Penang has an eventful history; the diversity of the inhabitants clearly indicates this. Penang is especially known as the best place to enjoy wonderful local dishes; it is seen as the food capital of Malaysia. There are many hotels and resorts on the island, most are located in and around the city of Georgetown and around the towns Batu Ferringhi and Tanjung Bungah.",
+                picture: '/images/Boulogne/centre.jpg',
+                activities: [{
+                    _id: payarisland._id,
+                    name: payarisland.name,
+                    nature: payarisland.nature,
+                    picture: granet.pictures[0]
+                    }]
+            };
 
-            }
+
             Cities.remove({});
             Cities.insert(aix);
             Cities.insert(boulogne);
