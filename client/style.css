@@ -12,6 +12,14 @@ body
     background-color: #eee;
 }
 
+h1, h2, h3, h4, h5, h6
+{
+    font-family: 'Lobster', cursive;
+    color: #208a71;
+    text-align: center;
+    font-size: 3em;
+}
+
 /** Header et nav **/
 header
 {
@@ -119,6 +127,7 @@ nav a:hover
     nav ul
     {
         position: absolute;
+        z-index: 100;
         flex-direction: column;
         top: 60px;
         width: 100%;
@@ -184,6 +193,7 @@ main h1
 {
     max-width: 60em; /* 960 px */
     margin: 0 auto;
+    min-width: 75%;
 }
 #list
 {
@@ -256,6 +266,7 @@ figcaption div
 
 
 /** Ville **/
+<<<<<<< HEAD
 
 .large_img
 {
@@ -276,6 +287,37 @@ figcaption div
     margin: 0 auto;
 }
 
+=======
+
+.large_img
+{
+    max-height: 500px;
+    margin: 0 -15px 15px -15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.large_img h1
+{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    text-align: center;
+    z-index: 2;
+    margin: 0 auto;
+}
+
+@media only screen and ( min-width: 1300px )
+{
+    .large_img h1
+    {
+        width: 1140px;
+    }
+}
+
+>>>>>>> 7ba65353a45988e4d74679751719727f96cd7891
 .overlay {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.4);
@@ -284,6 +326,37 @@ figcaption div
     z-index: 1;
 }
 
+<<<<<<< HEAD
+=======
+.map_and_desc
+{
+    display: flex;
+}
+
+.map_and_desc p
+{
+    margin: auto 15px;
+    width: 50%;
+}
+
+@media only screen and ( max-width: 1000px )
+{
+    .map_and_desc
+    {
+        flex-direction: column;
+    }
+    .map_and_desc p
+    {
+        margin: 15px 0;
+        width: 100%;
+    }
+    .map-container
+    {
+        height: 300px;
+        width: 100%;
+    }
+}
+>>>>>>> 7ba65353a45988e4d74679751719727f96cd7891
 /** Like **/
 
 .like {

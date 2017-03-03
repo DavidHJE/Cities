@@ -7,21 +7,40 @@
     <div class="map_and_desc">
        <div class="map-container">
             {{> googleMap name="map" options=mapOptions}}
+<<<<<<< HEAD
            
+=======
+>>>>>>> 7ba65353a45988e4d74679751719727f96cd7891
        </div>
         <p>{{{description}}}</p>
     </div>
     <h2>Places</h2>
-    {{#each p in places}}
-        <h3><a href="/activities/{{p._id}}">{{p.name}}</a></h3>
-        <img src="{{p.picture}}">
-    {{/each}}
+    <div class="wrapper">
+        <div class="list">
+        {{#each p in places}}
+            <a href="/activities/{{p._id}}" class="item">
+            <figure>
+                <img src="{{p.picture}}">
+                <figcaption><div>{{p.name}}</div></figcaption>
+            </figure>
+            </a>
+        {{/each}}
+        </div>
+    </div>
 
     <h2>Events</h2>
-    {{#each e in events}}
-        <h3><a href="/activities/{{e._id}}">{{e.name}}</a></h3>
-        <img src="{{e.picture}}">
-    {{/each}}
+    <div class="wrapper">
+        <div class="list">
+            {{#each e in events}}
+                <a href="/activities/{{e._id}}" class="item">
+                    <figure>
+                        <img src="{{e.picture}}">
+                        <figcaption><div>{{e.name}}</div></figcaption>
+                    </figure>
+                </a>
+            {{/each}}
+        </div>
+    </div>
 
     {{#if currentUser}}
         <h2>Insert a new activity :</h2>

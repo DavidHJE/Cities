@@ -60,12 +60,12 @@ Meteor.methods({
         );
       }},
 
-      'countLike' : function(idActivity){
+      /*'countLike' : function(idActivity){
         var act = Activities.findOne({_id:idActivity, likes:idUser});
         var cunt;
         for (var i = 0; i < Activities.likes.length; i++){
           cunt=i;
         }
       return cunt;
-    }
+    }*/
 });
