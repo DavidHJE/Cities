@@ -239,9 +239,9 @@ if (Meteor.isServer) {
                     _id: groupe._id,
                     email: groupe.emails[0].address
                 },
-                pictures: ["/images/bordeaux/animasia.jgp"],
+                pictures: ["/images/bordeaux/animasia.jpg"],
                 comments: [],
-                description: "",
+                description: "no description",
                 url: "",
                 dateStart: new Date('2016-4-1'),
                 dateEnd: new Date('2016-4-1')
@@ -260,6 +260,7 @@ if (Meteor.isServer) {
             Activities.insert(zooborbeaux);
             Activities.insert(cathedral);
             Activities.insert(rockschool);
+            Activities.insert(animasia);
 
             // **** cities
             var aix = {
@@ -361,6 +362,11 @@ if (Meteor.isServer) {
                     name: rockschool.name,
                     nature: rockschool.nature,
                     picture: rockschool.pictures[0]
+                    },{
+                    _id: animasia._id,
+                    name: animasia.name,
+                    nature: animasia.nature,
+                    picture: animasia.pictures[0]
                     }]
             };
 
