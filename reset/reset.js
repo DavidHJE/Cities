@@ -179,6 +179,58 @@ if (Meteor.isServer) {
                 dateEnd: new Date('2016-2-31')
             };
 
+            var placebourse = {
+                _id: "c3a0",
+                name: "Place de la bourse",
+                nature: "place",
+                editor: {
+                    _id: groupe._id,
+                    email: groupe.emails[0].address
+                },
+                pictures: ["/images/penang/escapePark2.jpg", "/images/penang/escapePark1.jpg"],
+                comments: [],
+                description: "no description"
+            };
+
+            var zooborbeaux = {
+                _id: "c3a1",
+                name: "Zoo de Bordeaux-Pessac",
+                nature: "place",
+                editor: {
+                    _id: groupe._id,
+                    email: groupe.emails[0].address
+                },
+                pictures: ["/images/penang/escapePark2.jpg", "/images/penang/escapePark1.jpg"],
+                comments: [],
+                description: "no description"
+            };
+
+            var cathedral = {
+                _id: "c3a2",
+                name: "Cathédrale St-André",
+                nature: "place",
+                editor: {
+                    _id: groupe._id,
+                    email: groupe.emails[0].address
+                },
+                pictures: ["/images/penang/escapePark2.jpg", "/images/penang/escapePark1.jpg"],
+                comments: [],
+                description: "no description"
+            };
+
+            var rockschool = {
+                _id: "c3a3",
+                name: "Rock School Barbey",
+                nature: "place",
+                editor: {
+                    _id: groupe._id,
+                    email: groupe.emails[0].address
+                },
+                pictures: ["/images/penang/escapePark2.jpg", "/images/penang/escapePark1.jpg"],
+                comments: [],
+                description: "no description"
+            };
+
             Activities.remove({})
             Activities.insert(granet);
             Activities.insert(saintSauveur);
@@ -187,6 +239,10 @@ if (Meteor.isServer) {
             Activities.insert(escapepark);
             Activities.insert(penanghotair);
             Activities.insert(georgetown);
+            Activities.insert(placebourse);
+            Activities.insert(zooborbeaux);
+            Activities.insert(cathedral);
+            Activities.insert(rockschool);
 
             // **** cities
             var aix = {
@@ -260,15 +316,35 @@ if (Meteor.isServer) {
             };
 
             var bordeaux = {
-                _id: "c2",
+                _id: "c3",
                 name: 'Bordeaux',
                 coordinates: {
-                    long: "5.4163",
-                    lat: "100.3328"
+                    long: "-0.5805000",
+                    lat: "44.8404400"
                 },
-                description: "Penang, also known as the pearl of the orient, is one of the most touristic locations of Malaysia. The island (285 square meters) is situated on the northwest side of the Peninsular Malaysia. There are loads of activities and sights on the island. Hanging around on the beach is also considered a fine option. About 700.000 people inhabit Penang Island, of which 59% are Chinese, 32% are Malay and 7% are Indian (2% are of other origin). The state of Penang has a population of 1,5 million (of which 43% are Malay and 41% Chinese). Penang has an eventful history; the diversity of the inhabitants clearly indicates this. Penang is especially known as the best place to enjoy wonderful local dishes; it is seen as the food capital of Malaysia. There are many hotels and resorts on the island, most are located in and around the city of Georgetown and around the towns Batu Ferringhi and Tanjung Bungah.",
+                description: "Bordeaux is a port city on the Garonne River in the Gironde department in southwestern France. <br /> The municipality of Bordeaux proper has a population of 243,626 (2012). Together with its suburbs and satellite towns, Bordeaux is the fifth largest in France, after Paris, Lyon, Marseille and Lille, and before Toulouse. It is the capital of the Nouvelle-Aquitaine region, as well as the prefecture of the Gironde department. Its inhabitants are called Bordelais (for men) or Bordelaises (women). <br /> Bordeaux is the world's major wine industry capital. It is home to the world's main wine fair, Vinexpo, and the wine economy in the metro area takes in 14.5 billion euros each year. After Paris, Bordeaux has the highest number of preserved historical buildings of any city in France.",
                 picture: '/images/penang/penang.jpg',
-                activities: []
+                activities: [{
+                    _id: placebourse._id,
+                    name: placebourse.name,
+                    nature: placebourse.nature,
+                    picture: placebourse.pictures[0]
+                    },{
+                    _id: zooborbeaux._id,
+                    name: zooborbeaux.name,
+                    nature: zooborbeaux.nature,
+                    picture: zooborbeaux.pictures[0]
+                    },{
+                    _id: cathedral._id,
+                    name: cathedral.name,
+                    nature: cathedral.nature,
+                    picture: cathedral.pictures[0]
+                    },{
+                    _id: rockschool._id,
+                    name: rockschool.name,
+                    nature: rockschool.nature,
+                    picture: rockschool.pictures[0]
+                    }]
             };
 
 
