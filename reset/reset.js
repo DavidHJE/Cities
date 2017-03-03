@@ -240,7 +240,7 @@ if (Meteor.isServer) {
                     _id: payarisland._id,
                     name: payarisland.name,
                     nature: payarisland.nature,
-                    picture: granet.pictures[0]
+                    picture: payarisland.pictures[0]
                     }, {
                     _id: escapepark._id,
                     name: escapepark.name,
@@ -259,11 +259,24 @@ if (Meteor.isServer) {
                     },]
             };
 
+            var bordeaux = {
+                _id: "c2",
+                name: 'Bordeaux',
+                coordinates: {
+                    long: "5.4163",
+                    lat: "100.3328"
+                },
+                description: "Penang, also known as the pearl of the orient, is one of the most touristic locations of Malaysia. The island (285 square meters) is situated on the northwest side of the Peninsular Malaysia. There are loads of activities and sights on the island. Hanging around on the beach is also considered a fine option. About 700.000 people inhabit Penang Island, of which 59% are Chinese, 32% are Malay and 7% are Indian (2% are of other origin). The state of Penang has a population of 1,5 million (of which 43% are Malay and 41% Chinese). Penang has an eventful history; the diversity of the inhabitants clearly indicates this. Penang is especially known as the best place to enjoy wonderful local dishes; it is seen as the food capital of Malaysia. There are many hotels and resorts on the island, most are located in and around the city of Georgetown and around the towns Batu Ferringhi and Tanjung Bungah.",
+                picture: '/images/penang/penang.jpg',
+                activities: []
+            };
+
 
             Cities.remove({});
             Cities.insert(aix);
             Cities.insert(boulogne);
             Cities.insert(penang);
+            Cities.insert(bordeaux);
         },
     })
 }
