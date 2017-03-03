@@ -331,6 +331,16 @@ figcaption div
         width: 100%;
     }
 }
+
+.comment_hr
+{
+    width: 75%;
+}
+
+.comm
+{
+    margin-left: 25px;
+}
 /** Like **/
 
 .like {

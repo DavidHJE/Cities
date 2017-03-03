@@ -6,7 +6,10 @@ Template.reset.events({
 	}
 });
 
-$( window ).load( function()
-{
-    $( '.list' ).masonry( { itemSelector: '.item' } );
+$(document).ready(function() {
+    $( window ).load( function()
+    {
+        $( '.list' ).masonry( { itemSelector: '.item' } );
+    });
 });
+

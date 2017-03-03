@@ -1,18 +1,28 @@
 <template name="activities">
 	<h2>{{nature}} : {{name}}</h2>
+    <hr />
 	<h3>Photos : </h3>
-	{{#each p in pictures}}
-	  <img src="{{p}}">
-	{{/each}}
-	<p>{{description}}</p>
+    <div class="wrapper">
+        <div class="list">
+        {{#each p in pictures}}
+          <div class="item"><img src="{{p}}"></div>
+        {{/each}}
+        </div>
+    </div>
+    <hr />
+	<p>{{description}} Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec felis orci. Sed id lacus sed tellus fermentum euismod. Duis at magna non risus feugiat feugiat non eget diam. Vestibulum quis malesuada nibh. Aliquam egestas, magna non faucibus auctor, leo ipsum volutpat turpis, vel egestas justo tortor a metus. Nam eu venenatis tellus. Sed sit amet sem consectetur, vulputate risus at, commodo lorem. Aenean commodo est ac blandit semper. Duis blandit ante ut augue auctor laoreet. Aliquam nec nulla pulvinar, sagittis nisl et, ullamcorper turpis. Donec id ligula non magna accumsan dapibus. Etiam vitae nisl erat.</p>
 	<p>editor: {{editor.email}}</p>
 	<a href="{{url}}">Voir le site</a>
+    <hr />
 	<h3>Comments : </h3>
 	{{#each com in comments}}
-		<p>{{com.user.email}} : {{com.text}}</p>
+        <hr class="comment_hr"/>
+		<p class="user_comm">{{com.user.email}} : </p>
+        <p class="comm">{{com.text}}</p>
 	{{/each}}
 
 	{{#if currentUser}}
+        <hr />
 	    <h2>Add your comment :</h2>
 	    <form>
 	        <textarea name="description" placeholder="Description"></textarea> <br />
