@@ -313,6 +313,24 @@ figcaption div
     margin: auto 15px;
     width: 50%;
 }
+
+@media only screen and ( max-width: 1000px )
+{
+    .map_and_desc
+    {
+        flex-direction: column;
+    }
+    .map_and_desc p
+    {
+        margin: 15px 0;
+        width: 100%;
+    }
+    .map-container
+    {
+        height: 300px;
+        width: 100%;
+    }
+}
 /** Like **/
 
 .like {
