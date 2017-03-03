@@ -143,18 +143,20 @@ nav a:hover
         z-index: 100;
         flex-direction: column;
         top: 60px;
-        width: 100%;
         opacity: 0;
+        display: none;
         transition: opacity 0.5s;
+        width: 200px;
     }
     #mymenu:hover #navul
     {
+        display: block;
         opacity: 1;
     }
     nav li
     {
         margin-right: auto;
-        min-width: 200px;
+        width: 200px;
     }
 
     #menu img
