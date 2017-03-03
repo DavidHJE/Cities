@@ -1,5 +1,13 @@
 <template name="activities">
-	<h2>{{nature}} : {{name}}</h2>
+    <div>
+	    <h2>{{nature}} : {{name}}</h2>
+        <div>
+            {{#if currentUser}}
+            <a href="#" id="aime"><img src="/pictures/like.png"  class="like"></a>
+            likes : {{countlikes}}
+        {{/if}}
+        </div>
+    </div>
     <hr />
 	<h3>Photos : </h3>
     <div class="wrapper">
@@ -17,8 +25,10 @@
 	<h3>Comments : </h3>
 	{{#each com in comments}}
         <hr class="comment_hr"/>
+    <div class="flex-comm">
 		<p class="user_comm">{{com.user.email}} : </p>
         <p class="comm">{{com.text}}</p>
+    </div>
 	{{/each}}
 
 	{{#if currentUser}}
@@ -28,10 +38,6 @@
 	        <textarea name="description" placeholder="Description"></textarea> <br />
 	        <input type="submit" name="commentaire" value="Send" />
 	    </form>
-
-	    <a href="#" id="aime"><img src="/pictures/like.png"  class="like"></a>
 <!-- 	    <a href="#" id="notaime"><img src="/pictures/notlike.png"  class="like"></a>
  -->	{{/if}}
-
- 	<p>likes : {{countlikes}} </p>
 </template>

@@ -193,7 +193,6 @@ main h1
 {
     max-width: 60em; /* 960 px */
     margin: 0 auto;
-    min-width: 75%;
 }
 #list
 {
@@ -336,14 +335,58 @@ figcaption div
 {
     width: 75%;
 }
+.flex-comm
+{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
 
 .comm
 {
-    margin-left: 25px;
+    width: 80%;
 }
+.user_comm
+{
+    width: 20%;
+}
+
 /** Like **/
 
 .like {
     width: 100px;
     height: 100px;
+}
+form
+{
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+input
+{
+    width: 100%;
+    margin: 5px;
+}
+
+textarea
+{
+    min-width: 100%;
+    max-width: 100%;
+    margin: 5px;
+}
+input[type="submit"]
+{
+    width: 100px;
+}
+@media only screen and ( max-width: 750px )
+{
+    form
+    {
+        width: 90%;
+    }
+    input
+    {
+        width: 100%;
+    }
 }

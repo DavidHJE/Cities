@@ -5,20 +5,17 @@
         Enjoy!!</p>
 
     {{#if currentUser}}
+        <hr />
         <h2>Insert a new city ::</h2>
         <form>
             <input id="f1" type="text" name="nameCity" placeholder="Name of your city" required="" /> <br/>
             <input id="f2" type="text" name="cityLattitude" placeholder="Lattitude" required="" /> <br/>
             <input id="f3" type="text" name="cityLongtitude" placeholder="Longtitude" required="" /> <br/>
+            {{> upload_bootstrap }}
             <input type="submit" value="submit" name="valider" id="createcity">
         </form>
-
     {{/if}}
-
-    {{#if currentUser}}
-        {{> upload_bootstrap }}
-    {{/if}}
-
+    <hr />
     <h2>Our cities</h2>
     <div class="wrapper">
         <div class="list">
