@@ -38,6 +38,7 @@ header
     bottom: 25px;
     transform: translateX(-50%);
     height: 150px;
+    z-index: 5000;
 }
 
 nav
@@ -152,10 +153,9 @@ nav a:hover
         min-width: 200px;
     }
 
-    #menu:hover #navul
+    #menu img
     {
-        display: block;
-        opacity: 1;
+        margin-left: -20px;
     }
 
     .endlist
