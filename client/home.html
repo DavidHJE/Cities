@@ -3,35 +3,36 @@
     <p>You can find in this website many cities with beautiful places, events (festivals, concerts and so on).
         Please, join us, and you will have the possibilities to participate to this new social network.
         Enjoy!!</p>
+
+    {{#if currentUser}}
+        <h2>Insert a new city ::</h2>
+        <form>
+            <input id="f1" type="text" name="nameCity" placeholder="Name of your city" required="" /> <br/>
+            <input id="f2" type="text" name="cityLattitude" placeholder="Lattitude" required="" /> <br/>
+            <input id="f3" type="text" name="cityLongtitude" placeholder="Longtitude" required="" /> <br/>
+            <input type="submit" value="submit" name="valider" id="createcity">
+        </form>
+
+    {{/if}}
+
+    {{#if currentUser}}
+        {{> upload_bootstrap }}
+    {{/if}}
+
+    <h2>Our cities</h2>
     <div class="wrapper">
         <div class="list">
             {{#each c in cities}}
                 <a href="/city/{{c._id}}" class="item">
                     <figure>
                         <img src="{{c.picture}}"/>
-                    <figcaption>
+                        <figcaption>
                         <div>{{c.name}}</div>
-                    </figcaption>
+                        </figcaption>
                     </figure>
                 </a>
             {{/each}}
-
         </div>
     </div>
     <div id="resetbtn">{{>reset}}</div>
-
-
-    {{#if currentUser}}
-    	<h2>Insert a new city ::</h2>
-    	<form>
-    		<input id="f1" type="text" name="nameCity" placeholder="Name of your city" required="" /> <br/>
-    		<input id="f2" type="text" name="cityLattitude" placeholder="Lattitude" required="" /> <br/>
-    		<input id="f3" type="text" name="cityLongtitude" placeholder="Longtitude" required="" /> <br/>
-            <input type="submit" value="submit" name="valider" id="createcity">
-    	</form>
-    {{/if}}
-    
-    {{#if currentUser}}
-    {{> upload_bootstrap }}
-    {{/if}}
 </template>
