@@ -30,11 +30,16 @@ Template.city.helpers({
         }
         return evt;
     },
+    
    mapOptions: function() {
+    var temp = Cities.findOne({"_id":Router.current().params.id});
+    var long = temp.coordinates.long;
+       var lat = temp.coordinates.lat ;
       if (GoogleMaps.loaded()) {
         return {
-          center: new google.maps.LatLng(-37.8136, 144.9631),
+          center: new google.maps.LatLng(long ,lat),
           zoom: 8
+        
         };
       }
     }

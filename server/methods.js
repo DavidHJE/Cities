@@ -3,8 +3,7 @@ Meteor.methods({
       console.log("coucou");
       Cities.insert({
             name: cityName,
-            lat : lat,
-            long : long 
+            coordinates:{long,lat}
         });
     },
     
