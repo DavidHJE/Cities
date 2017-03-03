@@ -176,7 +176,7 @@ if (Meteor.isServer) {
                 description: "George Town Festival is an exciting month-long celebration of local art, music, theatre, dance, and film in Penang. The event started back in 2009 as a series of arts and cultural events to commemorate Georgetown’s listing as a UNESCO Heritage Site before becoming one of Malaysia’s most high-anticipated cultural events of the year. For the entire month of August, the festival allows visitors to enjoy a diverse range of shows and attractions exploring Georgetown’s well-preserved heritage buildings and colourful street arts. There are also hundreds of booths selling Penang’s well-loved delicacies and snacks as well as local artwork, books, trinkets and souvenirs.",
                 url: "",
                 dateStart: new Date('2016-8-1'),
-                dateEnd: new Date('2016-2-31')
+                dateEnd: new Date('2016-8-31')
             };
 
             var placebourse = {
@@ -200,7 +200,7 @@ if (Meteor.isServer) {
                     _id: groupe._id,
                     email: groupe.emails[0].address
                 },
-                pictures: ["/images/bordeaux/ZooPessac"],
+                pictures: ["/images/bordeaux/ZooPessac.jpg"],
                 comments: [],
                 description: "no description"
             };
@@ -226,10 +226,27 @@ if (Meteor.isServer) {
                     _id: groupe._id,
                     email: groupe.emails[0].address
                 },
-                pictures: ["/images/bordeaux/rockschool"],
+                pictures: ["/images/bordeaux/rockschool.jpg"],
                 comments: [],
                 description: "no description"
             };
+
+            var animasia = {
+                _id: "c3a4",
+                name: "Animasia",
+                nature: "event",
+                editor: {
+                    _id: groupe._id,
+                    email: groupe.emails[0].address
+                },
+                pictures: ["/images/bordeaux/animasia.jgp"],
+                comments: [],
+                description: "",
+                url: "",
+                dateStart: new Date('2016-4-1'),
+                dateEnd: new Date('2016-4-1')
+            };
+
 
             Activities.remove({})
             Activities.insert(granet);
