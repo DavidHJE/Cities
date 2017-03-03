@@ -322,12 +322,13 @@ figcaption div
     .large_img h1
     {
         width: 1140px;
+        color: white;
     }
 }
 
 .overlay {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     height: 100%;
     width: 100%;
     z-index: 1;
