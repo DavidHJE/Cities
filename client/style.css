@@ -12,6 +12,14 @@ body
     background-color: #eee;
 }
 
+h1, h2, h3, h4, h5, h6
+{
+    font-family: 'Lobster', cursive;
+    color: #208a71;
+    text-align: center;
+    font-size: 3em;
+}
+
 /** Header et nav **/
 header
 {
@@ -260,7 +268,7 @@ figcaption div
 .large_img
 {
     max-height: 500px;
-    margin: 15 -15px;
+    margin: 0 -15px 15px -15px;
     overflow: hidden;
     position: relative;
 }
@@ -270,10 +278,19 @@ figcaption div
     position: absolute;
     width: 100%;
     top: 50%;
+    transform: translateY(-50%);
     left: 0;
     text-align: center;
     z-index: 2;
     margin: 0 auto;
+}
+
+@media only screen and ( min-width: 1300px )
+{
+    .large_img h1
+    {
+        width: 1140px;
+    }
 }
 
 .overlay {
@@ -284,6 +301,16 @@ figcaption div
     z-index: 1;
 }
 
+.map_and_desc
+{
+    display: flex;
+}
+
+.map_and_desc p
+{
+    margin: auto 15px;
+    width: 50%;
+}
 /** Like **/
 
 .like {
