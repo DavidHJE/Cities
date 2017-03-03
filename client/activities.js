@@ -17,6 +17,7 @@ Template.activities.helpers({
         }
         return comments;
     }*/
+
 });
 
 Template.activities.events({
@@ -33,5 +34,12 @@ Template.activities.events({
         }
         Meteor.call("addCom", comments, Template.currentData()._id);
         return false;
+    },
+
+    'click #aime' : function(e){
+        e.preventDefault();
+
+        Meteor.call("addLike", Template.currentData()._id);
+        Meteor.call("countLike", Template.currentData()._id);
     }
 });
